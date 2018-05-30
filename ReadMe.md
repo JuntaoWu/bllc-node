@@ -1,3 +1,6 @@
+# stats
+http://alturl.com/ywu3k/pw=JySe7
+
 # getTicket
     function getTicket() {
 		var iframe = document.createElement("iframe");
