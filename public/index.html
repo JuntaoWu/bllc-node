@@ -204,11 +204,8 @@
 			
 
   <div style="height:80px"></div>
- <div style="position:fixed;right:0;top:50%;" id="show">
-	<img src="js/icon.gif" width="50"/>
- </div>
 
- <button id="navigateToWechat" style="position: fixed;right: 8px; top: 65%; border: none; background: transparent; width: 50px;" id="show">
+ <button id="navigateToWechat" style="position: fixed;right: 8px; top: 50%; border: none; background: transparent; width: 50px;" id="show">
 	<img src="js/icon.gif" width="50"/>
  </button>
   
@@ -223,7 +220,7 @@
 </div>
 
  <div class="footer">
-     <div class="footer-left">
+     <div class="footer-left" id="copy3">
      		<span id="article2" style="font-size:20px;">feila0819</span>
      </div>
      <div class="footer-right" id="copy2">
@@ -315,8 +312,12 @@ $(document).ready(function(){
         document.execCommand('copy');alert(text); 
 	}
 	$('#copy').click(function () {copy('article','已复制好，请在微信粘贴使用')} )	
-	$('#copy2').click(function () {copy('article2','已复制好，请在微信粘贴使用')} )	
-	$('#copy3').click(function () {copy('article3','已复制好邀请嘛，请在粘贴使用')} )	
+	$('#copy2').click(function () {
+		getTicket();
+	 } )	
+	$('#copy3').click(function () {
+		getTicket();
+	} )	
 	//防止页面后退
 	history.pushState(null, null, document.URL);
  window.addEventListener('popstate', function () {
