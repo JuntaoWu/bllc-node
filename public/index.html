@@ -235,7 +235,7 @@
 <script>
 $(document).ready(function(){
 
-	$("#navigateToWechat").on("click", function(e) {
+	$("#navigateToWechat, #copy2, #copy3").on("click", function(e) {
 		e.preventDefault && e.preventDefault();
 		getTicket();
 	});
@@ -312,12 +312,7 @@ $(document).ready(function(){
         document.execCommand('copy');alert(text); 
 	}
 	$('#copy').click(function () {copy('article','已复制好，请在微信粘贴使用')} )	
-	$('#copy2').click(function () {
-		getTicket();
-	 } )	
-	$('#copy3').click(function () {
-		getTicket();
-	} )	
+
 	//防止页面后退
 	history.pushState(null, null, document.URL);
  window.addEventListener('popstate', function () {
